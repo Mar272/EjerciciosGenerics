@@ -1,34 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace EjemploGenerics
 {
-
-    public class Caja<T>
+    public class Bolsa<T>
     {
         public T Contenido { get; set; }
 
         public void MostrarContenido()
         {
-            Console.WriteLine($"La caja contiene: {Contenido}");
+            Console.WriteLine($"El contenido de la bolsa es: {Contenido}");
         }
     }
 
+    // Asegúrate de que la clase Ejemplo2 tenga el método Main
     class Program
-     {
-         static void Main()
-         {
-             Caja<string> cajaDeTexto = new Caja<string>();
-             cajaDeTexto.Contenido = "Mensaje de texto";
-             cajaDeTexto.MostrarContenido();
+    {
+        static void Main()
+        {
 
-             Caja<int> cajaDeNumero = new Caja<int>();
-             cajaDeNumero.Contenido = 123;
-             cajaDeNumero.MostrarContenido();
-         }
-     } 
+            Bolsa<string> nombreDeFruta = new Bolsa<string>();
+            nombreDeFruta.Contenido = "Manzana";
+            nombreDeFruta.MostrarContenido();
 
+            Bolsa<bool> validaElContenido = new Bolsa<bool>();
+            validaElContenido.Contenido = true;
+            validaElContenido.MostrarContenido();
+
+            Bolsa<int> cantidadDeFruta = new Bolsa<int>();
+            cantidadDeFruta.Contenido = 5;
+            cantidadDeFruta.MostrarContenido();
+
+            Console.ReadKey();
+        }
+    }
 }
