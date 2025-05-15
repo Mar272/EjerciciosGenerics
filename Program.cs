@@ -11,7 +11,6 @@ namespace EjemploGenerics
         }
     }
 
-    // Asegúrate de que la clase Ejemplo2 tenga el método Main
     class Program
     {
         static void Main()
